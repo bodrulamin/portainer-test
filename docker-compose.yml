@@ -1,10 +1,8 @@
-version: '3'
+version: '3.8'
+
 services:
-  focalboard:
-    image: mattermost/focalboard
-    ports:
-      - "8001:8000"
-    volumes:
-      - /opt/docker/focalboard/data:/opt/focalboard/data
-
-
+  hello-world:
+    # Use a lightweight base image
+    image: alpine:latest
+    # The command to be executed when the container starts
+    command: echo "Hello, world!"
