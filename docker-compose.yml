@@ -6,3 +6,5 @@ services:
       - "8001:8000"
     volumes:
       - /opt/docker/focalboard/data:/opt/focalboard/data
+
+
