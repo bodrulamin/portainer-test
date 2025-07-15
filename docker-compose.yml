@@ -1,8 +1,0 @@
-version: '3.8'
-
-services:
-  hello-world:
-    # Use a lightweight base image
-    image: alpine:latest
-    # The command to be executed when the container starts
-    command: echo "Hello, world! how are you bbfghgfhb"

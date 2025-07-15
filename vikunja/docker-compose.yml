@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  vikunja:
+    image: vikunja/vikunja
+    container_name: vikunja
+    environment:
+      VIKUNJA_DATABASE_TYPE: sqlite
+      VIKUNJA_DATABASE_PATH: /db/vikunja.db
+      VIKUNJA_SERVICE_JWTSECRET: 3f9c3244b6a64d1cb8d957ce5dc8c8a9871c0e0dd5eb8f429f46996fa71f13f4
+
+    volumes:
+      - /opt/docker/vikunja:/db
+      - /opt/docker/vikunja/custom/logo.svg:/app/vikunja/frontend/dist/assets/logo.svg
+    networks:
+      - shared_network
+
+networks:
+  shared_network:
+    external: true

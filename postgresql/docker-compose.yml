@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17-alpine3.20
+    container_name: postgres
+    environment:
+      POSTGRES_USER: bodrulamin
+      POSTGRES_PASSWORD: b&a.amin10 
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - '/opt/docker/postgres/pgdata:/var/lib/postgresql/data'
+    restart: unless-stopped
+
+    networks:
+      - shared_network
+
+networks:
+  shared_network:
+    external: true
